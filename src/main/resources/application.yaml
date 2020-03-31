@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: SampleDiDi
+
+mvf4ms:
+  version: 1.0.1
+  dependencies:
+    - name: dependency1
+      dependence:
+        - id: navigation
+          serviceName: SampleGaoDe
+          patternUrl: /navigation
+          versions:
+            - 1.1.1
+        - id: weather
+          function: weather
+          slas:
+            - 2
+        - id: pay
+          function: pay
+          slas:
+            - 2
+            - 3
+
+server:
+  port: 8080
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://{REGISTRY_IP}:{REGISTRY_PORT}/eureka
