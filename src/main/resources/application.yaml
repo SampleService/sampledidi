@@ -3,15 +3,10 @@ spring:
     name: SampleDiDi
 
 mvf4ms:
-  version: 1.1.2
+  version: 2.1.0
   dependencies:
     - name: dependency1
       dependence:
-        - id: navigation
-          serviceName: SampleGaoDe
-          patternUrl: /navigation
-          versions:
-            - 2.1.1
         - id: weather
           function: weather
           slas:
@@ -19,7 +14,7 @@ mvf4ms:
         - id: pay
           function: pay
           slas:
-            - 3
+            - 4
 
 server:
   port: 8080
