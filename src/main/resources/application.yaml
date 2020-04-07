@@ -25,4 +25,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://{REGISTRY_IP}:{REGISTRY_PORT}/eureka
+      defaultZone: http://{REGISTRY}/eureka
